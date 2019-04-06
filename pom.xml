@@ -20,5 +20,29 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+        <plugin>
+            <!--编译插件-->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+                <encoding>UTF-8</encoding>
+            </configuration>
+        </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>./temp-testng-customsuite.xml</suiteXmlFile>
+                        <!--此处testng.xml即为要运行的testng.xml文件-->
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+            </plugins>
+    </build>
 </project>
