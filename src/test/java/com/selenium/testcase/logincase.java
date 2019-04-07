@@ -24,6 +24,7 @@ public class logincase extends CaseBase{
     @Test
     public void login(){
         lps.login("backone","MISS1399427730");
+        System.out.println("ssss");
     }
     @AfterClass
     public void getLose(){
